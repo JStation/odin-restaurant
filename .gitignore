@@ -1,2 +1,5 @@
 node_modules/
 dist/
+
+# Except the index
+!index.html

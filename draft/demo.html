@@ -1,0 +1,58 @@
+<!-- Testing layout of tabs without Javascript DOM replacement -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo - SPA - HTML Coded</title>
+    <!-- https://fontlibrary.org/en/font/alexiafont -->
+    <!-- NOTE: Alexia font only has capital letters; no numbers! -->
+    <link rel="stylesheet" media="screen" href="https://fontlibrary.org//face/alexiafont" type="text/css"/>
+    <!-- https://fontlibrary.org/en/font/semyon-soviet -->
+    <link rel="stylesheet" media="screen" href="https://fontlibrary.org//face/semyon-soviet" type="text/css"/>
+    <style>
+        :root {
+            /* Theme Colors */
+            --copper-penny: hsla(9, 37%, 59%, 1);
+            --black-bean: hsla(14, 58%, 16%, 1);
+            --smoky-black: hsla(40, 43%, 4%, 1);
+            --rhythm: hsla(231, 14%, 55%, 1);
+            --blush: hsla(343, 67%, 65%, 1);
+        }
+
+        html {
+            color: var(--blush);
+            background-color: var(--black-bean);
+        }
+
+        body {
+            font-family: 'SemyonSovietRegular';
+        }
+
+        /* resets */
+        ul {
+            list-style: none;
+        }
+
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Hank's CyberGrill</h1>
+    </header>
+    <nav>
+        <ul>
+            <li>Info</li>
+            <li>Menu</li>
+            <li>Contact</li>
+        </ul>
+    </nav>
+    <div class="content"></div>
+    <footer>Nutricorp Global © 2059</footer>
+</body>
+
+</html>

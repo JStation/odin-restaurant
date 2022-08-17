@@ -8,10 +8,18 @@ module.exports = {
         filename: 'main.js',
         path: path.resolve(__dirname, 'dist'),
     },
+    module: {
+        rules: [
+            {
+                test: /\.css$/i,
+                use: ["style-loader", "css-loader"],
+            },
+        ],
+    },
     plugins: [
         new HtmlWebpackPlugin({
             title: "Hank's CyberGrill - Stop in for a Byte!",
             template: './src/index.html',
         })
-    ]
+    ],
 };

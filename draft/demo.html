@@ -9,9 +9,9 @@
     <title>Demo - SPA - HTML Coded</title>
     <!-- https://fontlibrary.org/en/font/alexiafont -->
     <!-- NOTE: Alexia font only has capital letters; no numbers! -->
-    <link rel="stylesheet" media="screen" href="https://fontlibrary.org//face/alexiafont" type="text/css"/>
+    <link rel="stylesheet" media="screen" href="https://fontlibrary.org//face/alexiafont" type="text/css" />
     <!-- https://fontlibrary.org/en/font/semyon-soviet -->
-    <link rel="stylesheet" media="screen" href="https://fontlibrary.org//face/semyon-soviet" type="text/css"/>
+    <link rel="stylesheet" media="screen" href="https://fontlibrary.org//face/semyon-soviet" type="text/css" />
     <style>
         :root {
             /* Theme Colors */
@@ -29,29 +29,174 @@
 
         body {
             font-family: 'SemyonSovietRegular';
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            min-height: 90vh;
         }
 
         /* resets */
         ul {
             list-style: none;
+            margin: 0;
+            padding: 0;
         }
 
+        h2 {
+            margin: 0;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+
+        }
+
+        /* end resets */
+
+        li {
+            font-size: 1.3rem;
+        }
+
+        .neonText {
+            color: #fff;
+            text-shadow:
+                0 0 7px #fff,
+                0 0 10px #fff,
+                0 0 21px #fff,
+                0 0 42px var(--blush),
+                0 0 82px var(--blush),
+                0 0 92px var(--blush),
+                0 0 102px var(--blush),
+                0 0 151px var(--blush);
+        }
+
+        @keyframes pulsate {
+            100% {
+                /* Larger blur radius */
+                text-shadow:
+                    0 0 4px #fff,
+                    0 0 11px #fff,
+                    0 0 19px #fff,
+                    0 0 40px var(--blush),
+                    0 0 80px var(--blush),
+                    0 0 90px var(--blush),
+                    0 0 100px var(--blush),
+                    0 0 150px var(--blush);
+            }
+
+            0% {
+                /* A slightly smaller blur radius */
+                text-shadow:
+                    0 0 4px #fff,
+                    0 0 10px #fff,
+                    0 0 18px #fff,
+                    0 0 38px var(--blush),
+                    0 0 73px var(--blush),
+                    0 0 80px var(--blush),
+                    0 0 94px var(--blush),
+                    0 0 140px var(--blush);
+            }
+        }
+
+        @font-face {
+            font-family: "Reey";
+            src: url("Reey-Regular.otf") format("opentype");
+        }
+
+        h1 {
+            font-size: 4rem;
+            position: relative;
+            /* needed for child span abs positioning */
+        }
+
+        .pulse {
+            animation: pulsate 0.22s ease-in-out infinite alternate;
+        }
+
+        .handwritten {
+            /* set font for hank name */
+            font-family: "Reey";
+            font-size: .5em;
+
+            /* tilt it for effect */
+            display: inline-block;
+            transform: rotate(-10deg);
+
+            /* overlap the corner */
+            position: absolute;
+            left: calc(-3rem);
+            top: calc(-1rem);
+
+        }
+
+        ul {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .content {
+            flex: 1;
+            margin-top: 2rem;
+        }
+
+        footer {
+            height: min-content;
+            margin-top: auto;
+            padding-top: 2rem;
+
+            font-size: .8em;
+            color: var(--copper-penny);
+        }
+
+        .info {
+            background-color: rgba(0, 0, 0, .2);
+            border-radius: 10px;
+            width: min-content;
+
+            padding: 1.2rem 2rem;
+
+            display: flex;
+            flex-direction: column;
+
+            align-items: center;
+            gap: 1rem;
+
+        }
 
     </style>
 </head>
 
 <body>
     <header>
-        <h1>Hank's CyberGrill</h1>
+        <h1 class="pulse"><span class="handwritten neonText pulse">Hank's</span> CyberGrill</h1>
     </header>
     <nav>
         <ul>
-            <li>Info</li>
-            <li>Menu</li>
-            <li>Contact</li>
+            <li>
+                <a href="#">Info</a>
+            </li>
+            <li>
+                <a href="#">Menu</a>
+            </li>
+            <li>
+                <a href="#">Contact</a>
+            </li>
         </ul>
     </nav>
-    <div class="content"></div>
+    <div class="content">
+        <div class="info">
+            <h2>Fast and Tasty Food for Humans</h2>
+            <img src="hanks_cybergrill.jpg" alt="A street shot of our Foundation alcove diner">
+            <div class="text">
+                <p>Hank's CyberGrill serves a variety of legally edible dishes in convenient locations throughout the
+                    Monoplastic District of New Detroit.</p>
+                <p>No need for reservations. Our autonomous services and auto-prep stations are standing by 24/7 to feed
+                    you.</p>
+            </div>
+        </div>
+    </div>
     <footer>Nutricorp Global © 2059</footer>
 </body>
 

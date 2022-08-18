@@ -2,6 +2,7 @@ console.log("index.js processed and loaded");
 
 import css from "./style.css";
 import setupSite from "./setup.js";
+import getInfoPage from "./info";
 
 // Overview
 // Load Page w/ static components (header, nav, empty container div, footer)
@@ -9,3 +10,7 @@ import setupSite from "./setup.js";
 // load info module by default
 
 setupSite();
+
+const content = document.querySelector('.content');
+console.log('content');
+content.appendChild(getInfoPage());

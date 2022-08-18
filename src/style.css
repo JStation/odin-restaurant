@@ -202,3 +202,25 @@ footer {
     max-width: 256px;
     border-radius: 20px;
 }
+
+.contact {
+    background-color: rgba(0, 0, 0, .2);
+    border-radius: 20px;
+    padding: 1rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+
+    width: min-content;
+}
+
+.contact img {
+    border-radius: 50px;
+    max-width: 400px;
+}
+
+.contactText {
+    padding: .5rem;
+}

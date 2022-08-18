@@ -4,6 +4,7 @@ import css from "./style.css";
 import setupSite from "./setup.js";
 import getInfoPage from "./info";
 import getMenuPage from "./menu";
+import getContactPage from "./contact";
 
 // Overview
 // Load Page w/ static components (header, nav, empty container div, footer)
@@ -38,6 +39,10 @@ const setupNavLinks = () => {
     const menuLink = document.querySelector("#menulink");
     menuLink.pageLoader = getMenuPage;
     menuLink.addEventListener("click", handleTabClick);
+
+    const contactLink = document.querySelector("#contactlink");
+    contactLink.pageLoader = getContactPage;
+    contactLink.addEventListener("click", handleTabClick);
 }
 
 setupSite();

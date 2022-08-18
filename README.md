@@ -1,6 +1,9 @@
 # Restaurant Page
 Demo Restaurant Project from The Odin Project Course
 
+## URL
+https://jstation.github.io/odin-restaurant/
+
 ## Theme
 Use webpack and Javascript to dynamically render a homepage.
 

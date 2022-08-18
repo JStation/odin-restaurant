@@ -23,18 +23,21 @@ const createNav = () => {
     const li_info = document.createElement('li');
     const a_info = document.createElement('a');
     a_info.innerText = "Info";
+    a_info.id = "infolink";
     li_info.appendChild(a_info);
     ul.appendChild(li_info);
 
     const li_menu = document.createElement('li');
     const a_menu = document.createElement('a');
     a_menu.innerText = "Menu";
+    a_menu.id = "menulink";
     li_menu.appendChild(a_menu);
     ul.appendChild(li_menu);
 
     const li_contact = document.createElement('li');
     const a_contact = document.createElement('a');
     a_contact.innerText = "Contact";
+    a_contact.id = "contactlink";
     li_contact.appendChild(a_contact);
     ul.appendChild(li_contact);
 

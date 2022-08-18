@@ -38,7 +38,16 @@ a {
 
 }
 
+::selection {
+    color: var(--copper-penny);
+    background: rgba(0, 0, 0, .5);
+}
+
 /* end resets */
+
+a {
+    cursor: pointer;
+}
 
 li {
     font-size: 1.3rem;
@@ -99,6 +108,7 @@ li {
 
 
 }
+
 h1 {
     font-size: 4rem;
     position: relative;
@@ -163,4 +173,32 @@ footer {
     align-items: center;
     gap: 1rem;
 
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+}
+
+.items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+
+    justify-content: center;
+}
+
+.item {
+    background-color: rgba(0, 0, 0, .2);
+    border-radius: 20px;
+    padding: 1rem;
+
+    text-align: center;
+}
+
+.menu img {
+    max-width: 256px;
+    border-radius: 20px;
 }

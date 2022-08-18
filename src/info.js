@@ -11,6 +11,7 @@ HTML Template:
     </div>
 </div>
 */
+import ImageDiner from './hanks_cybergrill.jpg';
 
 const getInfoPage = () => {
     // populate and return info page for display in content div
@@ -21,7 +22,10 @@ const getInfoPage = () => {
     h2.innerText = "Fast and Tasty Food for Humans"
     div.appendChild(h2);
 
-    // TODO: import image here
+    const imgDiner = new Image();
+    imgDiner.src = ImageDiner;
+    imgDiner.alt = "A street shot of our Foundation alcove diner";
+    div.appendChild(imgDiner);
     
     const divText = document.createElement('div');
     divText.classList.add('text');

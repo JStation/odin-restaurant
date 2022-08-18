@@ -35,7 +35,7 @@ const getInfoPage = () => {
     divText.appendChild(p1);
 
     const p2 = document.createElement('p');
-    p2.innerText = "No need for reservations. Our autonomous services and auto-prep stations are standing by 24/7 to feed you.";
+    p2.innerText = "No need for reservations. Our autonomous servers and auto-prep stations are standing by 24/7 to feed you.";
     divText.appendChild(p2);
 
     div.appendChild(divText);

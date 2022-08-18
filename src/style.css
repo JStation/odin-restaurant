@@ -90,6 +90,15 @@ li {
     src: url("Reey-Regular.otf") format("opentype");
 }
 
+@font-face {
+    font-family: 'SemyonSovietRegular';
+    src: url('semyon_soviet-webfont.woff2') format('woff2'),
+         url('semyon_soviet-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+
+}
 h1 {
     font-size: 4rem;
     position: relative;
